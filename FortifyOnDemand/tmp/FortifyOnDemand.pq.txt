@@ -1,0 +1,134 @@
+﻿// This file contains your Data Connector logic
+section FortifyOnDemand;
+
+// api key: 7bd9ec73-79c6-4c59-8b0c-7d80b1b6e867
+// api secret: NGtIWWpnUEJoSmoweDU1fm87c2JUbzR3bkthVV9F0
+// 
+// access token: SUZsUGdhSyg3X0djQGVPQnM5UTBMYUJVTzVxc3g10
+// user: michael.eva.snowden@microfocus.com
+// Tenant: franklinbank
+//
+// Client secret token: gAAAAIq67YRNBtApF2rGud1SyUueJ-US_9eU0hL0lTpLOTw7uOPxgmz_i06OoDFBOhr_SzRAYimgjMtPdYSSzzcxcBxDNb7CA-U8iM64dEIA0uu8V02AU79z3zYnkan7zKnsz5Km678n19GEbl8Q3tG0Ao3fCcA7DZK6cWNbGRnjEGQgZAEAAIAAAAAh972yhHGGDSkk0gRZm940IIOIwqOYbnH3-eeEfFvpIZ4-nGKq3EB6Wki_4oXls9s67W5XaA5MLcDDZKeekRWJ_K5RZt0Bqfdu1z7Y6o1AroU6x9X-RxTHgaROiV5XKjBSPVu0xX_oFe17isOmHlTxgQrHedvLxzJVzSl0X5iSmBTnbhpCx9UR0fw_gRqklDLrvLDu54lRKdiok-bXGxnTwj3ISLDE0ApFU9DirMSsl_FJ3zbu-AFNQ97tvqSXCebp_kbCiqJSy40hUSvdtQ7_YWSRYKMqtg5IYGXUkOnQnYA5pjakiWZCRGP1GcW92QfaFzg11AqdbmEYqgxYWJko3zqBnXSL4seAsTYqDTVU6pDRNg8-l-GobxFSWVMPO4uTUPq35Ob10kg3WHTYwmKW8dza4f_Q5JM_hHCPcSVEQiOZLrHTaeOuHNmxgvkJINUWwRU1tbCsr_VyWD0PMPQJ
+// Password produced token: gAAAADwSaQOXYn8gQVTxYZubgi65LNA4Qj98_NHaLnM02T1xPI3WVGNXplYgi-hlzINjuoSD82BLW_IQ6pQksGpPxMuhUBmyeyjHMgsyPiOjtBRA1Ljr1LvgkWRd0B93F81YFBjUzivm4E9eRFoESl-Kps3a_oqVR2RrgwDf6wlus29HVAMAAIAAAAB0R_2Do20JJcQgP7bMqCZ7PPya-akA9eS4MUE0YCExYExVLBlbMJqqpDR6gIUJ752VMoWVDmLh7n8gHkoLX_DbfePZsdc_td_zplhi7tdzc6Uq0ohJ-i5-_Fjwpe6ANI5zNTv2-SbbzGGdc6llVOTOeELAl88Mk5tP4t1vpxpclSML6DlOjAc1v207SU_uJZH5jwGXbKWZLTHqHiJYnft3bQZqlSpCcsinLKfO4OiFZa5RZLQjsMPr34XpY17pdo4_0mZIcQhKFyCs2dfSoFco4GdPlSGK25IimuMHv7x0d3-GBSIHBM5BOLONopTUlBUotysPxQtDj4TgPTWj0Mh4uWgPP3b9Rv4_9VlhSr8JwlHi4dyU4UcCUY2TVFJwNsId6S-_pD5Lx-JDm1cxVNCOaBpoUOlxxVjjDw9G865ws8A5RlclKuz1A1Cncpa4oOOSkLhF7OdvY2W5vnojDGpqAEuRm_yviBoOwl-um5qlU47NeGAro6lhFg-oBNQnWpVObL1fkidTjBxGRZHiNfcVFfsqJPglktevrGuVQ7CguCNxlKnJmhxLR0TNC4xdso7AHPaeeNaNlnBCZv3HAKa7Rm5D3c7R573lBdL3zka3ff7zEAa9oyjC8sr853pxzQpY6jhj1bUXt1Ns-X5gElJ0uPqRlvWtOYbpT61ETROK4fcMqolXwJMJ6XhJDEV0J11BPVMD8dDQ6Go7xHmZGvNF_xveOa0_2gMYP2tbfxjM81NhWATl6Is8jVn9ebBzjIRYU-Vh1pbKB7CiciMPTti6a8RVaduGPbJzi5_m_C3jqG62q1aU-stfrSuk0Oc0n_PPZVk7ufzApjk7Le8kYqfHXYgP8IUN95xj2JAQDhZgvHpv-EPSjZgqjXTTKSx9HEVUf2nIQzo4sJWaEoOo1UfgjV9S9qRO0T1ZwgeBnvwqZ4AXoaX5qiVS6gt42VeLvR5BUfRFzNgerY9K__r7mUy7Vz4NEma3TuPEv5VnsqZCzae0MnGm8vAryxW2Sz07c2I61bsKLMYcTWG7qrkvJzqi-8tkr_p3pggLcVhedQ5WBl6Y7ZjYRZsPDt2G9poCubHsgo2iji2Co-mZj-AxI0HEv82kyYvoL0II54OLgRVzug
+redirect_uri = "https://oauth.powerbi.com/views/oauthredirect.html";
+windowWidth = 800;
+windowHeight = 800;
+
+
+api_scope = "api-tenant";
+grant_type = "client_credentials";          // Options are: client_credentials, password
+api_key = "";                               // Client ID
+api_secret = "";                            // Client Secret
+datacentre_root_url = "ams.fortify.com";    // As of 2021/04/09 there are 3 main datacentres: ams, emea, apac
+BaseUrl = "https://api." + datacentre_root_url + "/api/v3/";
+OAuthBaseUrl = "/oauth/token";
+
+DefaultOptions = [ 
+    // The built-in credential handling for OpenApi.Document only works
+    // with Basic (UsernamePassword) auth. All other types should be handled
+    // explicitly using the ManualCredentials option.
+    //
+    // In the this sample, all of the calls we'll make will work anonymously.
+    // We can force anonymous access by setting ManualCredentials to true, and then
+    // not setting any additional request headers/parameters.
+    //
+    ManualCredentials = true,
+    // The returned data will match the schema defined in the swagger file. 
+    // This means that additional fields and object types that don't have explicit
+    // properties defined will be ignored. To see all results, we set the IncludeMoreColumns
+    // option to true. Any fields found in the response that aren't found in the schema will
+    // be grouped under this column in a record value.
+    //
+    IncludeMoreColumns = true,
+    // When IncludeExtensions is set to true, vendor extensions in the swagger ("x-*" fields)
+    // will be included as meta values on the function.
+    //
+    IncludeExtensions = true
+];
+
+
+[DataSource.Kind="FortifyOnDemand", Publish="FortifyOnDemand.Publish"]
+shared FortifyOnDemand.Contents= () =>
+    let
+        swagger = Extension.Contents("FoD_API_v3.json"),
+        nav = OpenApi.Document(swagger, DefaultOptions)
+    in
+        nav;
+
+// Data Source Kind description
+FortifyOnDemand = [
+    Authentication = [
+        // Key = [],
+        // UsernamePassword = [],
+        // Windows = [],
+        // Implicit = []
+        OAuth = [
+            StartLogin = StartLogin,
+            FinishLogin = FinishLogin,
+            Refresh=Refresh
+        ],
+        Key = [
+        ]
+    ],
+    Label = Extension.LoadString("DataSourceLabel")
+];
+
+// Data Source UI publishing description
+FortifyOnDemand.Publish = [
+    Beta = true,
+    Category = "Online Services",
+    ButtonText = { Extension.LoadString("ButtonTitle"), Extension.LoadString("ButtonHelp") },
+    LearnMoreUrl = "https://www.microfocus.com/en-us/cyberres/application-security",
+    SourceImage = Fortify.Icons,
+    SourceTypeImage = Fortify.Icons
+];
+
+Fortify.Icons = [
+    Icon16 = { Extension.Contents("FortifyOnDemand16.png"), Extension.Contents("FortifyOnDemand20.png"), Extension.Contents("FortifyOnDemand24.png"), Extension.Contents("FortifyOnDemand32.png") },
+    Icon32 = { Extension.Contents("FortifyOnDemand32.png"), Extension.Contents("FortifyOnDemand40.png"), Extension.Contents("FortifyOnDemand48.png"), Extension.Contents("FortifyOnDemand64.png") }
+];
+
+
+//
+// OAuth2 flow definition
+//
+
+StartLogin = (resourceUrl, state, display) =>
+    let
+        AuthorizeUrl = OAuthBaseUrl & "/authorize?" & Uri.BuildQueryString([
+            client_id = api_key,
+            response_type = "code",
+            state = state,
+            redirect_uri = redirect_uri])
+    in
+        [
+            LoginUri = AuthorizeUrl,
+            CallbackUri = redirect_uri,
+            WindowHeight = windowHeight,
+            WindowWidth = windowWidth,
+            Context = null
+        ];
+
+FinishLogin = (context, callbackUri, state) =>
+    let
+        Parts = Uri.Parts(callbackUri)[Query]
+    in
+        //TokenMethod(Parts[code], "authorization_code");
+        TokenMethod(Parts[code], grant_type);// access_token
+
+TokenMethod = (code, grant_type) =>
+    let
+        Response = Web.Contents(OAuthBaseUrl & "/access_token", [
+            Content = Text.ToBinary(Uri.BuildQueryString([
+                client_id = api_key,
+                client_secret = api_secret,
+                scope = api_scope,
+                grant_type = grant_type ])),
+                //redirect_uri = redirect_uri])),
+                
+            Headers=[#"Content-type" = "application/x-www-form-urlencoded",#"Accept" = "application/json"]]),
+        Parts = Json.Document(Response)
+    in
+        Parts;
+
+Refresh = (resourceUrl, refresh_token) => TokenMethod(refresh_token, "refresh_token");
