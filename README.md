@@ -44,6 +44,4 @@ Building the solution/projects
 1. Get VS 2019 and install the Power Query SDK ([link][1])
 2. Open the solution and build/rebuild it
 
-Alternatively, you can 
-
 [1]: https://marketplace.visualstudio.com/items?itemName=Dakahn.PowerQuerySDK
