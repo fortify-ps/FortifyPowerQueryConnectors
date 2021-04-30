@@ -25,7 +25,7 @@ So far the following connectors have been created:
 
 Installing the connectors
 ====
-The latest compiled connectors are available in the [releases][1] page.
+The latest compiled connectors are available in the [releases][2] page.
 - For Power BI:
   * https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-custom-connectors
 - For Power BI Desktop:
