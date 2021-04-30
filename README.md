@@ -25,6 +25,7 @@ So far the following connectors have been created:
 
 Installing the connectors
 ====
+The latest compiled connectors are available in the [releases][1] page.
 - For Power BI:
   * https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-custom-connectors
 - For Power BI Desktop:
@@ -45,3 +46,4 @@ Building the solution/projects
 2. Open the solution and build/rebuild it
 
 [1]: https://marketplace.visualstudio.com/items?itemName=Dakahn.PowerQuerySDK
+[2]: https://github.com/fortify-ps/FortifyPowerQueryConnectors/releases
