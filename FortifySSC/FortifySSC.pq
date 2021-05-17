@@ -21,7 +21,14 @@ shared FortifySSC.Contents = (optional message as text) =>
         TokenServiceUrl = BaseUrl & "/api/v1/tokens",
         ServiceJsonUrl = BaseUrl & "/api/v1/spec.json",
         headers = [ Authorization = "FortifyToken " & credential[Password] ],
-        navTable = OpenApi.Document(Web.Contents(ServiceJsonUrl), [ Headers = headers, ManualCredentials = true, IncludeMoreColumns = true, IncludeExtensions = true ])
+        //navTable = OpenApi.Document(Web.Contents(ServiceJsonUrl), [ Headers = headers, ManualCredentials = true, IncludeMoreColumns = true, IncludeExtensions = true ])
+
+        //Doing this because Fortify SSC (as of version 20.2) still does not include a value for schema. This causes issues when trying to connect to ssc with HTTPS enabled.
+        json = Extension.Contents("ssc.json"),
+        scheme = Text.Split(RootUrl, ":"){0},
+        host = Text.Split(RootUrl,"/"){2},
+        updatedJson = Text.Format(Text.FromBinary(json), {scheme, host}),
+        navTable = OpenApi.Document(Text.ToBinary(updatedJson), [ Headers = headers, ManualCredentials = true, IncludeMoreColumns = false, IncludeExtensions = true ])
     in
         navTable;
 
