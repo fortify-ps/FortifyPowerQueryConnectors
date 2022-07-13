@@ -17,7 +17,7 @@ shared FortifySSC.Contents = (optional message as text) =>
     let
         credential = Extension.CurrentCredential(),
         RootUrl = credential[Username],
-        BaseUrl = RootUrl & "/ssc",
+        BaseUrl = RootUrl & "/",
         TokenServiceUrl = BaseUrl & "/api/v1/tokens",
         ServiceJsonUrl = BaseUrl & "/api/v1/spec.json",
         headers = [ Authorization = "FortifyToken " & credential[Password] ],
