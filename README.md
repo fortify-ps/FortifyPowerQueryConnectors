@@ -25,7 +25,7 @@ So far the following connectors have been created:
 
 Important Notes:
 ===
-The most recent version of the connector (v2.x) has undergone a major rewrite in order to:
+The most recent version of the connector (v0.4.x) has undergone a major rewrite in order to:
 - Migrate the project to using VS Code in stead of Visual Studio
 - Consolidate the code for the connectors for SSC and FoD, into a single project which will produce a single MEZ connector file.
 
