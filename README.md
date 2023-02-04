@@ -58,7 +58,7 @@ Building:
 ----
 You have two options. You can either:
 - Run the build task from within VS Code
-- Or you can run the following command in powershell, after installing the prerequisites:
+- Or you can run the following command in powershell within the `FortifyConnector` directory, after installing the prerequisites:
   - `& "${home}\.vscode\extensions\powerquery.vscode-powerquery-sdk-0.2.1-win32-x64\.nuget\Microsoft.PowerQuery.SdkTools.2.112.4\tools\MakePQX.exe" compile`
 
 [1]: https://marketplace.visualstudio.com/items?itemName=PowerQuery.vscode-powerquery-sdk
