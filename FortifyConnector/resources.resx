@@ -117,28 +117,88 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="authKindLabel" xml:space="preserve">
-    <value>FoD Bearer Token</value>
-  </data>
   <data name="ButtonHelp" xml:space="preserve">
-    <value>Connect to Fortify on Demand's REST API</value>
+    <value>Connect to FortifyConnector</value>
   </data>
   <data name="ButtonTitle" xml:space="preserve">
-    <value>Fortify on Demand (AMS) </value>
+    <value>FortifyConnector</value>
   </data>
-  <data name="DataSourceLabel" xml:space="preserve">
+
+  <!-- For SSC -->
+    <data name="ssc_ButtonHelp" xml:space="preserve">
+    <value>Connect to Fortify SSC</value>
+  </data>
+  <data name="ssc_ButtonTitle" xml:space="preserve">
+    <value>Fortify SSC</value>
+  </data>
+
+  <data name="ssc_rootUrlLabel" xml:space="preserve">
+    <value>SSC Root URL</value>
+  </data>
+  <data name="ssc_keyLabel" xml:space="preserve">
+    <value>API Key</value>
+  </data>
+  <data name="ssc_authKindLabel" xml:space="preserve">
+    <value>API Authentication</value>
+  </data>
+  <data name="ssc_DataSourceLabel" xml:space="preserve">
+    <value>Fortify SSC REST API</value>
+  </data>
+
+  <!-- For FoD -->
+  <data name="fod_ButtonTitle" xml:space="preserve">
     <value>Fortify on Demand</value>
   </data>
-  <data name="keyLabel" xml:space="preserve">
-    <value>Bearer Token</value>
+  <data name="fod_DataSourceLabel" xml:space="preserve">
+    <value>Fortify on Demand</value>
   </data>
-  <data name="passwordLabel" xml:space="preserve">
+
+  <data name="fod_ButtonHelpAmsBearerTest" xml:space="preserve">
+    <value>FoD Bearer Test (AMS)</value>
+  </data>
+  <data name="fod_ButtonTitleAmsBearerTest" xml:space="preserve">
+    <value>FoD Bearer Test (AMS)</value>
+  </data>
+
+  <data name="fod_ButtonHelpAms" xml:space="preserve">
+    <value>Connect to Fortify on Demand (AMS)</value>
+  </data>
+  <data name="fod_ButtonTitleAms" xml:space="preserve">
+    <value>Fortify on Demand (AMS)</value>
+  </data>
+
+  <data name="fod_ButtonHelpApac" xml:space="preserve">
+    <value>Connect to Fortify on (APAC)</value>
+  </data>
+  <data name="fod_ButtonTitleApac" xml:space="preserve">
+    <value>Fortify on Demand (APAC)</value>
+  </data>
+
+  <data name="fod_ButtonHelpEmea" xml:space="preserve">
+    <value>Connect to Fortify on Demand (EMEA)</value>
+  </data>
+  <data name="fod_ButtonTitleEmea" xml:space="preserve">
+    <value>Fortify on Demand (EMEA)</value>
+  </data>
+
+
+  <data name="fod_ButtonHelp" xml:space="preserve">
+    <value>Connect to Fortify on Demand's REST API</value>
+  </data>
+  <data name="fod_authKindLabel" xml:space="preserve">
+    <value>Client ID &amp; Secret</value>
+  </data>
+  <data name="fod_keyLabel" xml:space="preserve">
+    <value>Client ID &amp; Secret [Format: &lt;ApiKey&gt;\&lt;ApiSecret&gt;] (eg: 8971-4010-a441\NTdGh...)</value>
+  </data>
+  <data name="fod_passwordLabel" xml:space="preserve">
     <value>Personal Access Token (recommended) or Password</value>
   </data>
-  <data name="usernameLabel" xml:space="preserve">
+  <data name="fod_usernameLabel" xml:space="preserve">
     <value>User Name [Format: &lt;tenant&gt;\&lt;username&gt;] (eg: awesomeTenant\userBob1 )</value>
   </data>
-  <data name="usernamePasswordLabel" xml:space="preserve">
+  <data name="fod_usernamePasswordLabel" xml:space="preserve">
     <value>FoD Basic Login</value>
   </data>
+
 </root>
