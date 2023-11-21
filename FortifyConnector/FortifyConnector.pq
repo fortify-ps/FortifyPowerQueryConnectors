@@ -48,6 +48,7 @@ GetFoDInstance = (region as text) as table =>
         fodBaseUrl = "https://api." & region & ".fortify.com",
         fodApiUrl = fodBaseUrl & "/swagger/docs/v3",
         headers = [ Authorization = "Bearer " & GetFoDBearerToken(fodBaseUrl) ],
+        //asNav = OpenApi.Document(embededSscSpecJson, [ Headers = headers, ManualCredentials = true, IncludeMoreColumns = true, IncludeExtensions = true ])
         asNav = OpenApi.Document(Web.Contents(fodApiUrl), [ Headers = headers, ManualCredentials = true, IncludeMoreColumns = true, IncludeExtensions = true ])
     in
         asNav;
@@ -70,7 +71,22 @@ shared FortifyConnector.FortifySSC = () =>
         TokenServiceUrl = BaseUrl & "/api/v1/tokens",
         ServiceJsonUrl = BaseUrl & "/api/v1/spec.json",
         headers = [ Authorization = "FortifyToken " & credential[Password] ],
-        navTable = OpenApi.Document(Web.Contents(ServiceJsonUrl), [ Headers = headers, ManualCredentials = true, IncludeMoreColumns = true, IncludeExtensions = true ])
+        
+        // Dynamically modifying the spec.json
+        sscSpec = Web.Contents(ServiceJsonUrl),
+        oldValue = """traceNodes"":{""type"":""array"",""description"":""Issue trace nodes"",""items"":{""type"":""array"",""items"":{""$ref"":""#/definitions/TraceNodeDto""}}}",
+        newValue = """traceNodes"":{""type"":""array"",""description"":""Issue trace nodes"",""items"":{""type"":""array"",""items"":{""type"":""object""}}}",
+        modifiedSscSpec = Text.Replace(Lines.ToText(Lines.FromBinary(sscSpec)), oldValue, newValue),
+        modifiedSscSpecBinary = Text.ToBinary(modifiedSscSpec),
+        navTable = OpenApi.Document(modifiedSscSpecBinary, [ Headers = headers, ManualCredentials = true, IncludeMoreColumns = true, IncludeExtensions = true ])
+        
+        // Using an embeded, modified, spec.json
+        //embededSscSpecJson = Extension.Contents("ssc-23-1-swagger-json-modified.json"),
+        //navTable = OpenApi.Document(embededSscSpecJson, [ Headers = headers, ManualCredentials = true, IncludeMoreColumns = true, IncludeExtensions = true ])
+
+        // No modification of spec.json        
+        //navTable = OpenApi.Document(Web.Contents(ServiceJsonUrl), [ Headers = headers, ManualCredentials = true, IncludeMoreColumns = true, IncludeExtensions = true ])
+
     in
         navTable;
 
